@@ -1,0 +1,15 @@
+{
+  "name": "quiz-time",
+  "version": "1.0.0",
+  "description": "It is a e-quiz made by electron all copyrights to Subhi Salman",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Subhi-Salman",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.7.9"
+  }
+}
