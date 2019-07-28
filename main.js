@@ -21,7 +21,7 @@ function createWindow () {
   win.loadURL(path.join('file://',__dirname,'index.html'));
 
   // Open the DevTools.
-
+win.webContents.openDevTools()
   // Emitted when the window is closed.
   win.on('closed', () => {
     
@@ -37,12 +37,9 @@ app.on('ready', function(){
 
   const template = [
     {
-      label:'القائمة',
-      /*submenu: [
-        {
-          label: 'راسلنا'
-        }
-      ]*/
+      label:'Menu'
+      
+      
     }
   ]
   const menu = Menu.buildFromTemplate(template)

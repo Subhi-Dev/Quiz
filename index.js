@@ -11,6 +11,7 @@ function open1lev() {
     let levwin = new BrowserWindow({alwaysOnTop: true})
     levwin.loadURL(levpath);
     levwin.show()
+    levwin.webContents.openDevTools()
     levwin.on('closed', () => {
         check()
     })
@@ -20,6 +21,7 @@ function open2lev() {
     let levwin = new BrowserWindow({alwaysOnTop: true})
     levwin.loadURL(levpath);
     levwin.show()
+    levwin.webContents.openDevTools()
     levwin.on('closed', () => {
       check()
   })
@@ -106,8 +108,10 @@ function open10lev() {
 
 }
 check()
+
 function check() {
-  var v = "C:/Users/Code/Desktop/100-Great";
+  var v = "C:/Users/Code/Desktop/Quiz-Time";
+
 
     fs.readFile(v.concat('/1lev/1lev.txt'), 'utf-8', (err, data) => {
       if (data == "3") {
@@ -174,4 +178,102 @@ function check() {
         data = "0";
       }
     });
+}
+function reset(){
+
+  var filepath = "C:/Users/Code/Desktop/Quiz-Time/";// Previously saved path somewhere
+
+  if (fs.existsSync(filepath.concat('1lev/1lev.txt'))) {
+      fs.unlink(filepath.concat('1lev/1lev.txt'), (err) => {
+          if (err) {
+              alert("An error ocurred updating the file" + err.message);
+              console.log(err);
+              return;
+          }
+      });
+  } 
+  if (fs.existsSync(filepath.concat('2lev/2lev.txt'))) {
+    fs.unlink(filepath.concat('2lev/2lev.txt'), (err) => {
+        if (err) {
+            alert("An error ocurred updating the file" + err.message);
+            console.log(err);
+            return;
+        }
+    });
+} 
+if (fs.existsSync(filepath.concat('3lev/3lev.txt'))) {
+  fs.unlink(filepath.concat('3lev/3lev.txt'), (err) => {
+      if (err) {
+          alert("An error ocurred updating the file" + err.message);
+          console.log(err);
+          return;
+      }
+  });
+} 
+if (fs.existsSync(filepath.concat('4lev/4lev.txt'))) {
+  fs.unlink(filepath.concat('4lev/4lev.txt'), (err) => {
+      if (err) {
+          alert("An error ocurred updating the file" + err.message);
+          console.log(err);
+          return;
+          
+      }
+  });
+} 
+if (fs.existsSync(filepath.concat('5lev/5lev.txt'))) {
+  fs.unlink(filepath.concat('5lev/5lev.txt'), (err) => {
+      if (err) {
+          alert("An error ocurred updating the file" + err.message);
+          console.log(err);
+          return;
+      }
+  });
+} 
+if (fs.existsSync(filepath.concat('6lev/6lev.txt'))) {
+  fs.unlink(filepath.concat('6lev/6lev.txt'), (err) => {
+      if (err) {
+          alert("An error ocurred updating the file" + err.message);
+          console.log(err);
+          return;
+      }
+  });
+} 
+if (fs.existsSync(filepath.concat('7lev/7lev.txt'))) {
+  fs.unlink(filepath.concat('7lev/7lev.txt'), (err) => {
+      if (err) {
+          alert("An error ocurred updating the file" + err.message);
+          console.log(err);
+          return;
+      }
+  });
+} 
+if (fs.existsSync(filepath.concat('8lev/8lev.txt'))) {
+  fs.unlink(filepath.concat('8lev/8lev.txt'), (err) => {
+      if (err) {
+          alert("An error ocurred updating the file" + err.message);
+          console.log(err);
+          return;
+      }
+  });
+} 
+if (fs.existsSync(filepath.concat('9lev/9lev.txt'))) {
+  fs.unlink(filepath.concat('9lev/9lev.txt'), (err) => {
+      if (err) {
+          alert("An error ocurred updating the file" + err.message);
+          console.log(err);
+          return;
+      }
+  });
+} 
+if (fs.existsSync(filepath.concat('10lev/10lev.txt'))) {
+  fs.unlink(filepath.concat('10lev/10lev.txt'), (err) => {
+      if (err) {
+          alert("An error ocurred updating the file" + err.message);
+          console.log(err);
+          return;
+      }
+  });
+} 
+document.getElementById("reset").textContent = "Please restart application";
+
 }
