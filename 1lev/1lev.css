@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
+
+html{
+    background-image: url("bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+#qno{
+    font-style: italic;
+    text-align: right;
+    color: rgba(198, 236, 231, 0.575);
+    font-size: 15px;
+}
+#question{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Abel', sans-serif;
+}
+.button{
+    background-color: #2a609a;
+    width: 20%;
+    height: 80px;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Barlow', sans-serif;
+}
+#wrapper{
+    text-align: center;
+}
+#Mark{
+    text-align: center;
+    font-size: 30px;
+    color: slategrey;
+}
